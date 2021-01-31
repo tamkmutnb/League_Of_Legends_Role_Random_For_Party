@@ -11,9 +11,20 @@ def scramble():
         print("May TEEMO be With You\n")
         time.sleep(1.5) 
         shuffle(M)
-        for L,M in zip(L,M):
+        zip_lm = zip(L,M)
+        lst_lm = []
+        for L,M in zip_lm:
             print(L+M)    
-            time.sleep(2)
+            time.sleep(1)
+            print('.')
+            time.sleep(1)
+            print('.')
+            time.sleep(1)
+            lst_lm.append(L+M)  
+
+        for i in range(len(lst_lm)):
+            print(str(lst_lm[i]))
+        time.sleep(1)
         scramble()
     if x =="N":
         for i in range(3,0,-1):
